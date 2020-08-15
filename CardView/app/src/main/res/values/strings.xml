@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CardView</string>
+    <string name="danilo_alves">Danilo Alves</string>
+    <string name="agora_mesmo">Agora mesmo</string>
+    <string name="tbt_viagem_legal">#tbt Viagem Legal</string>
+    <string name="conteudo_com_imagem">Conteúdo com Imagem</string>
+    <string name="like">Like</string>
+    <string name="comentar">Comentar</string>
+</resources>
