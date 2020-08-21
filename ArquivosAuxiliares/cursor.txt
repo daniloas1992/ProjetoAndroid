@@ -1,0 +1,10 @@
+Cursor cursor = ...
+
+if (_cursor != null) {
+  if (_cursor.moveToFirst()) {
+    do {
+      ...
+    } while (_cursor.moveToNext());
+  }
+  _cursor.close();
+}
