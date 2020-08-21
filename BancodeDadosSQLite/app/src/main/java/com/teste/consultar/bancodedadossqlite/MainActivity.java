@@ -23,11 +23,13 @@ public class MainActivity extends AppCompatActivity {
             SQLiteDatabase bancoSQL = openOrCreateDatabase(BANCO_DADOS, MODE_PRIVATE, null);
 
             //Criar tabela
-            bancoSQL.execSQL("CREATE TABLE IF NOT EXISTS T_PESSOAS (NOME VARCHAR, IDADE INT(2)) ");
+            bancoSQL.execSQL("CREATE TABLE IF NOT EXISTS T_PESSOAS (ID INTEGER PRIMARY KEY AUTOINCREMENT, NOME VARCHAR, IDADE INT(2)) ");
+
+            //bancoSQL.execSQL("DROP TABLE T_PESSOAS");
 
             //Inserir dados
-            bancoSQL.execSQL("INSERT INTO T_PESSOAS (NOME, IDADE) VALUES ('Danilo', 28)");
-            bancoSQL.execSQL("INSERT INTO T_PESSOAS (NOME, IDADE) VALUES ('Lidy', 29)");
+            //bancoSQL.execSQL("INSERT INTO T_PESSOAS (NOME, IDADE) VALUES ('Danilo', 28)");
+            //bancoSQL.execSQL("INSERT INTO T_PESSOAS (NOME, IDADE) VALUES ('Lidy', 29)");
 
             //Recuperar dados
             Cursor cursor = bancoSQL.rawQuery("SELECT NOME, IDADE FROM T_PESSOAS", null);
