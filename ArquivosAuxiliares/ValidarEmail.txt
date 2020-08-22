@@ -1,0 +1,21 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+ 
+campoEmail = findViewById(R.id.editLoginEmail);
+textoEmail = campoEmail.getText().toString();
+ 
+if (!textoEmail.isEmpty()){
+    String regex = "[a-z0-9._-]+@[a-z0-9.-]+\\.[a-z]{2,4}";
+    Pattern pattern = Pattern.compile(regex);
+    String source = textoEmail;
+    Matcher matcher = pattern.matcher(source);
+    if (matcher.find() && matcher.group().equals(source)){
+        //se positivo continue seu código aqui
+    } else {
+        campoEmail.setError("Formato de e-mail inválido");
+        campoEmail.requestFocus();
+    }
+} else {
+    campoEmail.setError("Preencha o campo E-mail");
+    campoEmail.requestFocus();
+}
